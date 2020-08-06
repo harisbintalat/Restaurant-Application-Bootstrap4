@@ -29,9 +29,29 @@
                   <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                   <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
               </ul>
+              <span class="navbar-text">
+                <a data-toggle="model" data-target="#loginmodel">
+                  <span class="fa fa-sign-in"></span> Login
+                </a>
+              </span>
          </div>
       </div>
   </nav>
+  <div class="model fade" id="loginmodel" role="dialog">
+    <div class="model-dialog model-lg" role="content">
+      <div class="model-content">
+        <div class="model=header">
+          <h4 class="model-title">Login</h4>
+          <button type="button" class="close" data-dismiss="model">
+            &times;
+          </button>
+        </div>
+        <div class="model-body">
+            <form></form>
+        </div>
+      </div>
+    </div>
+  </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -42,8 +62,12 @@
                 <div class="col-12  col-sm-3 align-self-center">
                   <img src="img/logo.png"  class="img-fluid">
                 </div>
-                <div class="col-12 col-sm-3">
-                  <a class="btn btn-warning" href="#restable">Reserve a Table</a>
+                <div role="button" class="col-12 col-sm-3 align-self-center">
+                  <a class="btn btn-block btn btn-warning"
+                    data-toggle="tooltip" data-html="true"
+                    title="Or call us at 090078601"
+                    data-placement="buttom"
+                   href="#restable">Reserve a Table</a>
                 </div>
             </div>
         </div>
@@ -179,6 +203,11 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function{
+    $('[data-toggle="tooltip"]').tooltip();
+  })
+</script>
 </body>
 
 </html>
